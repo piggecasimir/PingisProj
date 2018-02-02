@@ -13,7 +13,6 @@
             <h1 style="color:#353535 ; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
                 Pingis Pingis Pingis</h1>
-	
             <center>
             <table class="keywords">
                 <thead>
@@ -92,6 +91,11 @@
 			<asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
 			<asp:TextBox ID="newPlayerPwd" runat="server" placeholder="Password" TextMode="Password"/>
             <asp:Button ID="btnAddPlayer" runat="server" Text="Add new player" />
+				<br />
+				<br />
+				<p>Remove Player:</p><asp:DropDownList ID="DropDownRemove" runat="server">
+                </asp:DropDownList><asp:TextBox ID="RemovePwd" runat="server" placeholder="Password" TextMode="Password"/>
+				<asp:Button ID="btnRemovePlayer" runat="server" Text="Remove player" />
                 </center>
         </div>
     </form>
