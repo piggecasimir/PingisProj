@@ -75,7 +75,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddCandy.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -83,12 +82,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCandy.aspx.cs">
-      <DependentUpon>AddCandy.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddCandy.aspx.designer.cs">
-      <DependentUpon>AddCandy.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
