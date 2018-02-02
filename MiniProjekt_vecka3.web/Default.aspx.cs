@@ -51,8 +51,16 @@ namespace MiniProjekt_vecka3.web
 		private void BtnAddPlayer_Click(object sender, EventArgs e)
 		{
 			DataManager dataManager = new DataManager();
-			dataManager.AddNewPlayer(newPlayerName.Text);
-			Response.Redirect("Default.Aspx");
+			if (newPlayerPwd.Text == "Academy")
+			{
+				dataManager.AddNewPlayer(newPlayerName.Text);
+				Response.Redirect("Default.Aspx");
+			}
+			else
+			{
+				Response.Redirect("Default.Aspx");
+			}
+			
 		}
 
 		private void BtnMatch_Click(object sender, EventArgs e)
