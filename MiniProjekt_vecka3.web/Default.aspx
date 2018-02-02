@@ -55,7 +55,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Player</th>
+                        <th>Playermurg</th>
                         <th>Matches Played</th>
                         <th>Matches Won</th>
                         <th>Matches Lost</th>
