@@ -50,11 +50,7 @@
 <body>
 	<form id="form1" runat="server">
 		<div>
-			<h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18
-                <br />
-				Pingis Pingis Pingis</h1>
-			<h1>HEj</h1>
-			Bordtennis</h1>
+			<h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18</h1>
             <center>
             <table>
                 <thead>

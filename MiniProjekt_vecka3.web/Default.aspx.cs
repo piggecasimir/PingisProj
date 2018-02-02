@@ -56,6 +56,7 @@ namespace MiniProjekt_vecka3.web
                 DataManager datamanager = new DataManager();
                 datamanager.AddMatch(player1, player2, sets1, sets2);
                 datamanager.UppdatePlayer(player1, player2, sets1, sets2);
+                datamanager.EloRaiting(player1, player2, sets1, sets2);
                 Response.Redirect("Default.aspx");
             }
             else
