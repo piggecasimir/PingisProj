@@ -31,6 +31,15 @@ namespace MiniProjekt_vecka3.web {
         protected global::System.Web.UI.WebControls.Repeater leagueRepeater;
         
         /// <summary>
+        /// matchRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater matchRepeater;
+        
+        /// <summary>
         /// DropDownListPlayer control.
         /// </summary>
         /// <remarks>
@@ -74,15 +83,6 @@ namespace MiniProjekt_vecka3.web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListPlayer2;
-        
-        /// <summary>
-        /// matchRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater matchRepeater;
         
         /// <summary>
         /// newPlayerName control.
