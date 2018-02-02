@@ -12,7 +12,7 @@
         <div id="wrapper">
             <h1 style="color:#353535 ; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
-                Pingis Pingis Pingis</h1>
+                Ping Pong Tournament</h1>
             <center>
             <table class="keywords">
                 <thead>
@@ -24,7 +24,7 @@
                         <th>Sets Won</th>
                         <th>Sets Lost</th>
                         <th>Set Difference</th>
-						 <th>Rating</th>
+						<th>Rating</th>
                     </tr>
                 </thead>
 
@@ -38,12 +38,12 @@
                             <td><%# Eval("SetsWon") %></td>
                             <td><%# Eval("SetsLost") %></td>
                             <td><%# Eval("SetDifference") %></td>
-							 <td><%# Eval("Elo") %></td>
+							<td><%# Eval("Elo") %></td>
                         </tr>       
                     </ItemTemplate>
                 </asp:Repeater>
             </table>
-            <asp:Button ID="btnMatch" runat="server" Text="Add"/>
+            <br /><br />
             <table>
 
                 <thead>
@@ -57,7 +57,7 @@
                                 <asp:ListItem Value="1">1</asp:ListItem>
                                 <asp:ListItem Value="2">2</asp:ListItem>
                             </asp:DropDownList></th>
-                        <th></th>
+                        <th><asp:Button ID="btnMatch" runat="server" Text="Add"/></th>
                         <th>
                             <asp:DropDownList ID="DropDownListP2Sets" runat="server">
                                 <asp:ListItem Value="0">0</asp:ListItem>
@@ -90,20 +90,33 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </table>
-				<table><tr><th><h3>Add new Player:</h3></th><th><h3>Remove Player:</h3></th></tr>
+				<br /><br />
+				<table><tr><th><h3>Add new Player:</h3></th></tr>
 					<tr><td>
 			<asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
 			<asp:TextBox ID="newPlayerPwd" runat="server" placeholder="Password" TextMode="Password"/>
             <asp:Button ID="btnAddPlayer" runat="server" Text="Add new player" />
-					    </td><td>
+					    </td></tr>
+
+
+                    </table>
+				<br /><br />
+				<table>
+					<tr>
+						<th><h3>Remove Player:</h3></th>
+					</tr>
+
+					<tr>
+						<td>
 				<asp:DropDownList ID="DropDownRemove" runat="server">
                 </asp:DropDownList><asp:TextBox ID="RemovePwd" runat="server" placeholder="Password" TextMode="Password"/>
 				<asp:Button ID="btnRemovePlayer" runat="server" Text="Remove player" />
 
-					         </td></tr>
+					         </td>
 
+					</tr>
 
-                    </table>
+				</table>
                 </center>
             
         </div>
