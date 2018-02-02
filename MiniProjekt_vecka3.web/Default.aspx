@@ -89,6 +89,7 @@
                 </asp:Repeater>
             </table>
 			<asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
+			<asp:TextBox ID="newPlayerPwd" runat="server" placeholder="Password" TextMode="Password"/>
             <asp:Button ID="btnAddPlayer" runat="server" Text="Add new player" />
                 </center>
         </div>
