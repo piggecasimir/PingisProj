@@ -4,55 +4,57 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style>
-        body {
-            background-color:aquamarine;
-        }
-        h1:hover {
-            background-color: moccasin;
-        }
+	<title></title>
+	<style>
+		body {
+			background-color: aquamarine;
+		}
 
-        table, th, td, tr {
-            border: 1px solid gray;
-            border-collapse: collapse;
-            text-align: center;
-        }
+		h1:hover {
+			background-color: moccasin;
+		}
 
-        tr:nth-child(even) {
-            background-color:pink;
-        }
+		table, th, td, tr {
+			border: 1px solid gray;
+			border-collapse: collapse;
+			text-align: center;
+		}
 
-                tr:nth-child(odd) {
-            background-color:palevioletred;
-        }
+			tr:nth-child(even) {
+				background-color: pink;
+			}
 
-        .nameL {
-            text-align: left;
-        }
+			tr:nth-child(odd) {
+				background-color: palevioletred;
+			}
 
-        .nameR {
-            text-align: right;
-        }
+		.nameL {
+			text-align: left;
+		}
 
-        .middle {
-            border-left:none;
-            border-right:none;
-        }
-        .score {
-            border-left:none;
-            border-right:none;
-        }
-    </style>
+		.nameR {
+			text-align: right;
+		}
+
+		.middle {
+			border-left: none;
+			border-right: none;
+		}
+
+		.score {
+			border-left: none;
+			border-right: none;
+		}
+	</style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18
+	<form id="form1" runat="server">
+		<div>
+			<h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
-                Pingis Pingis Pingis</h1>
-            <h1> HEj</h1>
-                Bordtennis</h1>
+				Pingis Pingis Pingis</h1>
+			<h1>HEj</h1>
+			Bordtennis</h1>
             <center>
             <table>
                 <thead>
@@ -128,8 +130,10 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </table>
-                </center>
-        </div>
-    </form>
+			<asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
+            <asp:Button ID="btnAddPlayer" runat="server" Text="Add new player" />
+           </center>
+		</div>
+	</form>
 </body>
 </html>

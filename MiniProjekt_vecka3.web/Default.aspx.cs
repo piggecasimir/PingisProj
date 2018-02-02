@@ -33,10 +33,19 @@ namespace MiniProjekt_vecka3.web
 
 
             btnMatch.Click += BtnMatch_Click;
-            
-        }
 
-        private void BtnMatch_Click(object sender, EventArgs e)
+			btnAddPlayer.Click += BtnAddPlayer_Click;
+
+		}
+
+		private void BtnAddPlayer_Click(object sender, EventArgs e)
+		{
+			DataManager dataManager = new DataManager();
+			dataManager.AddNewPlayer(newPlayerName.Text);
+			Response.Redirect("Default.Aspx");
+		}
+
+		private void BtnMatch_Click(object sender, EventArgs e)
         {
             int player1 = int.Parse(DropDownListPlayer.SelectedValue);
             int player2 = int.Parse(DropDownListPlayer2.SelectedValue);
