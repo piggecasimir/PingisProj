@@ -14,12 +14,14 @@ namespace Miniprojekt_v3.Data
 		public void RemovePlayer(int id)
 		{
 			SqlCommand command = new SqlCommand($"DELETE FROM Players WHERE Id = {id}", conn);
-			
-			
+			SqlCommand command2 = new SqlCommand($"DELETE FROM Matches WHERE Player1 = {id} OR Player2 = {id}", conn);
+
+
 			try
 			{
 				conn.Open();
 				command.ExecuteNonQuery();
+				command2.ExecuteNonQuery();
 			}
 			catch
 			{
