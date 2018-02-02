@@ -17,8 +17,8 @@ namespace Miniprojekt_v3.Data
             int EloP1;
             int EloP2;
 
-            SqlCommand command1 = new SqlCommand($"SELECT [Elo], FROM Players Where [Id] = {player1}", conn);
-            SqlCommand command2 = new SqlCommand($"SELECT [Elo], FROM Players Where [Id] = {player2}", conn);
+            SqlCommand command1 = new SqlCommand($"SELECT [Elo] FROM Players Where [Id] = {player1}", conn);
+            SqlCommand command2 = new SqlCommand($"SELECT [Elo] FROM Players Where [Id] = {player2}", conn);
 
             try
             {
