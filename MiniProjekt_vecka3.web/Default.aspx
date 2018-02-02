@@ -52,6 +52,7 @@
                 <br />
                 Pingis Pingis Pingis</h1>
             <h1> HEj</h1>
+                Bordtennis</h1>
             <center>
             <table>
                 <thead>
