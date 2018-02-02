@@ -5,59 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style>
-        body {
-            background-color:aquamarine;
-        }
-        h1:hover {
-            background-color: moccasin;
-        }
-
-        table, th, td, tr {
-            border: 1px solid gray;
-            border-collapse: collapse;
-            text-align: center;
-        }
-
-        tr:nth-child(even) {
-            background-color:pink;
-        }
-
-                tr:nth-child(odd) {
-            background-color:palevioletred;
-        }
-
-        .nameL {
-            text-align: left;
-        }
-
-        .nameR {
-            text-align: right;
-        }
-
-        .middle {
-            border-left:none;
-            border-right:none;
-        }
-        .score {
-            border-left:none;
-            border-right:none;
-        }
-    </style>
+    <link href="PingisStyle.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18
+        <div id="wrapper">
+            <h1 style="color:#353535 ; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
                 Pingis Pingis Pingis</h1>
-            <h1> HEj</h1>
-                Bordtennis</h1>
             <center>
-            <table>
+            <table class="keywords">
                 <thead>
                     <tr>
-                        <th>Playermurg</th>
+                        <th>Player</th>
                         <th>Matches Played</th>
                         <th>Matches Won</th>
                         <th>Matches Lost</th>
@@ -70,14 +30,14 @@
                 <asp:Repeater ID="leagueRepeater" runat="server">
                     <ItemTemplate>
                         <tr>
-                            <td class="nameL"><%# Eval("Name") %></td>
+                            <td ><%# Eval("Name") %></td>
                             <td><%# Eval("MatchesPlayed") %></td>
                             <td><%# Eval("MatchesWon") %></td>
                             <td><%# Eval("MatchesLost") %></td>
                             <td><%# Eval("SetsWon") %></td>
                             <td><%# Eval("SetsLost") %></td>
                             <td><%# Eval("SetDifference") %></td>
-                        </tr>
+                        </tr>       
                     </ItemTemplate>
                 </asp:Repeater>
             </table>
