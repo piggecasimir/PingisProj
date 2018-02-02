@@ -21,6 +21,16 @@ namespace MiniProjekt_vecka3.web
             matchRepeater.DataSource = matchTable;
             matchRepeater.DataBind();
 
+            List<String> playerName = new List<string>();
+            foreach (var item in leagueTable)
+            {
+                playerName.Add(item.Id.ToString());
+            }
+
+            //List<Match> matchPlayer = manager.GetMatchTable();
+            //playerRepeater.DataSource = matchPlayer;
+            //playerRepeater.DataBind();
+
             List<Player> dropDownPlayers = manager.GetLeagueTable();
 
             foreach (var item in dropDownPlayers)
@@ -41,8 +51,16 @@ namespace MiniProjekt_vecka3.web
 		private void BtnAddPlayer_Click(object sender, EventArgs e)
 		{
 			DataManager dataManager = new DataManager();
-			dataManager.AddNewPlayer(newPlayerName.Text);
-			Response.Redirect("Default.Aspx");
+			if (newPlayerPwd.Text == "Academy")
+			{
+				dataManager.AddNewPlayer(newPlayerName.Text);
+				Response.Redirect("Default.Aspx");
+			}
+			else
+			{
+				Response.Redirect("Default.Aspx");
+			}
+			
 		}
 
 		private void BtnMatch_Click(object sender, EventArgs e)

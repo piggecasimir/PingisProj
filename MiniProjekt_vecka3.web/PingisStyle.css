@@ -1,0 +1,40 @@
+﻿body {
+    background-color: burlywood;
+    color: #202020;
+}
+
+h1:hover {
+    background-color: orange;
+}
+
+table, th, td, tr {
+    border: 1px solid yellow;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+    tr:nth-child(even) {
+        background-color:gold;
+    }
+
+    tr:nth-child(odd) {
+        background-color:orange;
+    }
+
+.nameL {
+    text-align: left;
+}
+
+.nameR {
+    text-align: right;
+}
+
+.middle {
+    border-left: none;
+    border-right: none;
+}
+
+.score {
+    border-left: none;
+    border-right: none;
+}
