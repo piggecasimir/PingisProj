@@ -8,9 +8,23 @@ using System.Configuration;
 
 namespace Miniprojekt_v3.Data
 {
-    public class DataManager
+    public partial class DataManager
     {
         SqlConnection conn;
+
+        public void EloRaiting(int player)
+        {
+            SqlCommand command1 = new SqlCommand($"SELECT [Elo], FROM Players Where [Id] = {player}", conn);
+            SqlCommand command2 = new SqlCommand($"SELECT [Elo], FROM Players Where [Id] = {player}", conn);
+            int EloP1 = int.Parse(command1.ToString());
+            int EloP2 = 0;
+
+            double RatingP1 = Math.Pow(10, EloP1);
+
+           
+        }
+        
+
 
         public DataManager()
         {
