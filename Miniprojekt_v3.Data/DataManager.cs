@@ -14,8 +14,8 @@ namespace Miniprojekt_v3.Data
 
         public void EloRaiting(int player1, int player2, int setsP1, int setsP2)
         {
-            int EloP1;
-            int EloP2;
+            double EloP1;
+            double EloP2;
 
             SqlCommand command1 = new SqlCommand($"SELECT [Elo] FROM Players Where [Id] = {player1}", conn);
             SqlCommand command2 = new SqlCommand($"SELECT [Elo] FROM Players Where [Id] = {player2}", conn);
@@ -24,9 +24,13 @@ namespace Miniprojekt_v3.Data
             {
                 conn.Open();
                 SqlDataReader reader1 = command1.ExecuteReader();
+                reader1.Read();
+                EloP1 = Convert.ToDouble(reader1["Elo"].ToString());
+                conn.Close();
+                conn.Open();
                 SqlDataReader reader2 = command2.ExecuteReader();
-                EloP1 = int.Parse(reader1["Elo"].ToString());
-                EloP2 = int.Parse(reader2["Elo"].ToString());
+                reader2.Read();
+                EloP2 = Convert.ToDouble(reader2["Elo"].ToString());
             }
             catch (Exception)
             {
@@ -39,8 +43,8 @@ namespace Miniprojekt_v3.Data
             }
 
 
-            double RatingP1 = Math.Pow(10, EloP1);
-            double RatingP2 = Math.Pow(10, EloP2);
+            double RatingP1 = Math.Pow(10, EloP1 / 400);
+            double RatingP2 = Math.Pow(10, EloP2 / 400);
 
             double eP1 = RatingP1 / (RatingP1 + RatingP2);
             double eP2 = RatingP2 / (RatingP1 + RatingP2);
@@ -57,9 +61,9 @@ namespace Miniprojekt_v3.Data
                 s2 = 1;
             }
 
-            double newEloP1 = RatingP1 + 32 * (s1 - eP1);
-            double newEloP2 = RatingP1 + 32 * (s2 - eP2);
-
+            int newEloP1 = Convert.ToInt32( EloP1 + 32 * (s1 - eP1));
+            int newEloP2 = Convert.ToInt32( EloP2 + 32 * (s2 - eP2));
+            
             SqlCommand commandP1 = new SqlCommand($"UPDATE Players SET [Elo] = {newEloP1} where Id = {player1}", conn);
             SqlCommand commandP2 = new SqlCommand($"UPDATE Players SET [ELo] = {newEloP2} where Id = {player2}", conn);
 
