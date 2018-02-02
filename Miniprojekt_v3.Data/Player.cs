@@ -17,5 +17,6 @@ namespace Miniprojekt_v3.Data
         public int SetsWon { get; set; }
         public int SetsLost { get; set; }
         public int SetDifference { get; set; }
-    }
+		public int Elo { get; set; }
+	}
 }

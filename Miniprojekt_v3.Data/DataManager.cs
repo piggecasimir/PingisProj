@@ -122,7 +122,7 @@ namespace Miniprojekt_v3.Data
         public List<Player> GetLeagueTable()
         {
             List<Player> ret = new List<Player>();
-            SqlCommand command = new SqlCommand("SELECT Id, Name, MatchesPlayed, MatchesWon, MatchesLost, SetsWon, SetsLost, SetDifference FROM Players ORDER BY MatchesWon DESC, SetDifference DESC", conn);
+            SqlCommand command = new SqlCommand("SELECT Id, Name, MatchesPlayed, MatchesWon, MatchesLost, SetsWon, SetsLost, SetDifference, Elo FROM Players ORDER BY Elo DESC, MatchesWon DESC", conn);
             try
             {
                 conn.Open();
@@ -138,6 +138,7 @@ namespace Miniprojekt_v3.Data
                     player.SetsLost = Convert.ToInt32(reader["SetsLost"].ToString());
                     player.SetDifference = Convert.ToInt32(reader["SetDifference"].ToString());
                     player.Id = Convert.ToInt32(reader["Id"].ToString());
+					player.Elo = Convert.ToInt32(reader["Elo"].ToString());
                     ret.Add(player);
 
                 }
