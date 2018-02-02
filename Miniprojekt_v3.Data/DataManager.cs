@@ -8,7 +8,7 @@ using System.Configuration;
 
 namespace Miniprojekt_v3.Data
 {
-    public class DataManager
+    public partial class DataManager
     {
         SqlConnection conn;
 
