@@ -24,6 +24,7 @@
                         <th>Sets Won</th>
                         <th>Sets Lost</th>
                         <th>Set Difference</th>
+						 <th>Rating</th>
                     </tr>
                 </thead>
 
@@ -37,6 +38,7 @@
                             <td><%# Eval("SetsWon") %></td>
                             <td><%# Eval("SetsLost") %></td>
                             <td><%# Eval("SetDifference") %></td>
+							 <td><%# Eval("Elo") %></td>
                         </tr>       
                     </ItemTemplate>
                 </asp:Repeater>
@@ -88,8 +90,20 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </table>
-                <asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
-                <asp:Button ID="btnAddPlayer" runat="server" Text="Add new player" />
+				<table><tr><th><h3>Add new Player:</h3></th><th><h3>Remove Player:</h3></th></tr>
+					<tr><td>
+			<asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
+			<asp:TextBox ID="newPlayerPwd" runat="server" placeholder="Password" TextMode="Password"/>
+            <asp:Button ID="btnAddPlayer" runat="server" Text="Add new player" />
+					    </td><td>
+				<asp:DropDownList ID="DropDownRemove" runat="server">
+                </asp:DropDownList><asp:TextBox ID="RemovePwd" runat="server" placeholder="Password" TextMode="Password"/>
+				<asp:Button ID="btnRemovePlayer" runat="server" Text="Remove player" />
+
+					         </td></tr>
+
+
+                    </table>
                 </center>
             
         </div>

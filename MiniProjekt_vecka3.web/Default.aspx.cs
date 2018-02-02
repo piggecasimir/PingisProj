@@ -39,6 +39,7 @@ namespace MiniProjekt_vecka3.web
                 ListItem listItem = new ListItem(item.Name, item.Id.ToString());
                 DropDownListPlayer.Items.Add(listItem);
                 DropDownListPlayer2.Items.Add(listItem);
+				DropDownRemove.Items.Add(listItem);
             }
 
 
@@ -46,13 +47,37 @@ namespace MiniProjekt_vecka3.web
 
 			btnAddPlayer.Click += BtnAddPlayer_Click;
 
+			btnRemovePlayer.Click += BtnRemovePlayer_Click;
+
+		}
+
+		private void BtnRemovePlayer_Click(object sender, EventArgs e)
+		{
+			DataManager dataManager = new DataManager();
+			if (RemovePwd.Text == "SecretPassword")
+			{
+				dataManager.RemovePlayer(Convert.ToInt32(DropDownRemove.SelectedValue));
+				Response.Redirect("Default.Aspx");
+			}
+			else
+			{
+				Response.Redirect("Default.Aspx");
+			}
 		}
 
 		private void BtnAddPlayer_Click(object sender, EventArgs e)
 		{
 			DataManager dataManager = new DataManager();
-			dataManager.AddNewPlayer(newPlayerName.Text);
-			Response.Redirect("Default.Aspx");
+			if (newPlayerPwd.Text == "Academy")
+			{
+				dataManager.AddNewPlayer(newPlayerName.Text);
+				Response.Redirect("Default.Aspx");
+			}
+			else
+			{
+				Response.Redirect("Default.Aspx");
+			}
+			
 		}
 
 		private void BtnMatch_Click(object sender, EventArgs e)
@@ -66,6 +91,7 @@ namespace MiniProjekt_vecka3.web
                 DataManager datamanager = new DataManager();
                 datamanager.AddMatch(player1, player2, sets1, sets2);
                 datamanager.UppdatePlayer(player1, player2, sets1, sets2);
+                datamanager.EloRaiting(player1, player2, sets1, sets2);
                 Response.Redirect("Default.aspx");
             }
             else

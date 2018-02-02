@@ -1,0 +1,1 @@
+﻿DELETE FROM Players Where Id = 1002
