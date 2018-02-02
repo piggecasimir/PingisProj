@@ -50,12 +50,14 @@
         <div>
             <h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
+                Pingis Pingis Pingis</h1>
+            <h1> HEj</h1>
                 Bordtennis</h1>
             <center>
             <table>
                 <thead>
                     <tr>
-                        <th>Player</th>
+                        <th>Playermurg</th>
                         <th>Matches Played</th>
                         <th>Matches Won</th>
                         <th>Matches Lost</th>
