@@ -44,34 +44,6 @@
                 </asp:Repeater>
             </table>
             <br /><br />
-
-								<table>
-
-               <tr><th></th><th class="score"></th><th class="score">10 Latest games:</th><th class="score"></th><th></th></tr>
-
-                    <tr>
-                        <th>Player 1</th>
-                        <th class="score"></th>
-                        <th class="middle"></th>
-                        <th class="score"></th>
-                        <th>Player 2</th>
-                    </tr>
-
-                <asp:Repeater ID="matchRepeater" runat="server">
-                    <ItemTemplate>
-                        <tr>
-                            <td class="nameL"><%# Eval("Player1") %></td>
-                            <td class="score"><%# Eval("Player1Sets") %></td>
-                            <td class="middle">-</td>
-                            <td class="score"><%# Eval("Player2Sets") %></td>
-                            <td class="nameR"><%# Eval("Player2") %></td>
-                        </tr>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </table>
-
-				<br /><br />
-
             <table>
 				<tr><th></th><th class="score"></th><th class="score">Add new Match</th><th class="score"></th><th></th></tr>
 				                    <tr>
@@ -97,7 +69,33 @@
 
                     </tr>
 				</table>
+                <br /><br />
+								<table>
 
+               <tr><th></th><th class="score"></th><th class="score">10 Latest games:</th><th class="score"></th><th></th></tr>
+
+                    <tr>
+                        <th>Player 1</th>
+                        <th class="score"></th>
+                        <th class="middle"></th>
+                        <th class="score"></th>
+                        <th>Player 2</th>
+                    </tr>
+
+                <asp:Repeater ID="matchRepeater" runat="server">
+                    <ItemTemplate>
+                        <tr>
+                            <td class="nameL"><%# Eval("Player1") %></td>
+                            <td class="score"><%# Eval("Player1Sets") %></td>
+                            <td class="middle">-</td>
+                            <td class="score"><%# Eval("Player2Sets") %></td>
+                            <td class="nameR"><%# Eval("Player2") %></td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </table>
+
+			
 				<br /><br />
 				<table><tr><th>Add new Player:</th></tr>
 					<tr><td>
