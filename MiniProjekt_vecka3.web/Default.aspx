@@ -4,16 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <link href="PingisStyle.css" rel="stylesheet" />
+	<title></title>
+	<link href="PingisStyle.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="wrapper">
             <h1 style="color:#ffffff ; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
-                Ping Pong Tournament</h1>
-            <center>
+				Ping Pong Tournament</h1>
+			<center>
             <table class="keywords">
                 <thead>
                     <tr>
@@ -44,31 +44,11 @@
                 </asp:Repeater>
             </table>
             <br /><br />
-            <table>
 
-                <thead>
-                    <tr>
-                        <th>
-                            <asp:DropDownList ID="DropDownListPlayer" runat="server">
-                            </asp:DropDownList></th>
-                        <th>
-                            <asp:DropDownList ID="DropDownListP1Sets" runat="server">
-                                <asp:ListItem Value="0">0</asp:ListItem>
-                                <asp:ListItem Value="1">1</asp:ListItem>
-                                <asp:ListItem Value="2">2</asp:ListItem>
-                            </asp:DropDownList></th>
-                        <th><asp:Button ID="btnMatch" runat="server" Text="Add"/></th>
-                        <th>
-                            <asp:DropDownList ID="DropDownListP2Sets" runat="server">
-                                <asp:ListItem Value="0">0</asp:ListItem>
-                                <asp:ListItem Value="1">1</asp:ListItem>
-                                <asp:ListItem Value="2">2</asp:ListItem>
-                            </asp:DropDownList></th>
-                        <th>
-                            <asp:DropDownList ID="DropDownListPlayer2" runat="server">
-                            </asp:DropDownList></th>
+								<table>
 
-                    </tr>
+               <tr><th></th><th class="score"></th><th class="score">10 Latest games:</th><th class="score"></th><th></th></tr>
+
                     <tr>
                         <th>Player 1</th>
                         <th class="score"></th>
@@ -76,7 +56,6 @@
                         <th class="score"></th>
                         <th>Player 2</th>
                     </tr>
-                </thead>
 
                 <asp:Repeater ID="matchRepeater" runat="server">
                     <ItemTemplate>
@@ -90,8 +69,37 @@
                     </ItemTemplate>
                 </asp:Repeater>
             </table>
+
 				<br /><br />
-				<table><tr><th><h3>Add new Player:</h3></th></tr>
+
+            <table>
+				<tr><th></th><th class="score"></th><th class="score">Add new Match</th><th class="score"></th><th></th></tr>
+				                    <tr>
+                        <td>
+                            <asp:DropDownList ID="DropDownListPlayer" runat="server">
+                            </asp:DropDownList></td>
+                        <td class="score">
+                            <asp:DropDownList ID="DropDownListP1Sets" runat="server">
+                                <asp:ListItem Value="0">0</asp:ListItem>
+                                <asp:ListItem Value="1">1</asp:ListItem>
+                                <asp:ListItem Value="2">2</asp:ListItem>
+                            </asp:DropDownList></td>
+                        <td class="score"><asp:Button ID="btnMatch" runat="server" Text="Add"/></td>
+                        <td class="score">
+                            <asp:DropDownList ID="DropDownListP2Sets" runat="server">
+                                <asp:ListItem Value="0">0</asp:ListItem>
+                                <asp:ListItem Value="1">1</asp:ListItem>
+                                <asp:ListItem Value="2">2</asp:ListItem>
+                            </asp:DropDownList></td>
+                        <td>
+                            <asp:DropDownList ID="DropDownListPlayer2" runat="server">
+                            </asp:DropDownList></td>
+
+                    </tr>
+				</table>
+
+				<br /><br />
+				<table><tr><th>Add new Player:</th></tr>
 					<tr><td>
 			<asp:TextBox ID="newPlayerName" runat="server" placeholder="Player Name"/>
 			<asp:TextBox ID="newPlayerPwd" runat="server" placeholder="Password" TextMode="Password"/>
@@ -103,7 +111,7 @@
 				<br /><br />
 				<table>
 					<tr>
-						<th><h3>Remove Player:</h3></th>
+						<th>Remove Player:</th>
 					</tr>
 
 					<tr>
@@ -118,8 +126,8 @@
 
 				</table>
                 </center>
-            
-        </div>
-    </form>
+
+		</div>
+	</form>
 </body>
 </html>
