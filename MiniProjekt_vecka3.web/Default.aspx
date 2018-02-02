@@ -13,9 +13,7 @@
             <h1 style="color:#353535 ; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
                 Pingis Pingis Pingis</h1>
-	<form id="form1" runat="server">
-		<div>
-			<h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18</h1>
+	
             <center>
             <table class="keywords">
                 <thead>
