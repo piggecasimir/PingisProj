@@ -50,7 +50,7 @@
         <div>
             <h1 style="color: lime; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
-                Pingis Pingis Pingis</h1>
+                Bordtennis</h1>
             <center>
             <table>
                 <thead>
