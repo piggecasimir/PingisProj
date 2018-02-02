@@ -1,11 +1,13 @@
 ﻿body {
-    background-color: burlywood;
-    color: #202020;
+    background-color: #7a7e99;
+    color: white;
 }
 
+tr:hover {
+    background-color: rgba(144, 144, 144, 0.6) !important;
+}
 th {
-
-    
+    background-color: #424fa1;
 }
 table, th, td, tr {
     border: 1px solid beige;
@@ -17,11 +19,11 @@ table, th, td, tr {
 }
 
     tr:nth-child(even) {
-        background-color:darkkhaki;
+        background-color: #7cb6b8;
     }
 
     tr:nth-child(odd) {
-        background-color:khaki;
+        background-color: #5986ab;
     }
 
 .nameL {

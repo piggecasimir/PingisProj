@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div id="wrapper">
-            <h1 style="color:#353535 ; font-size: 80px; text-align: center">Academy C#.NET VT18
+            <h1 style="color:#ffffff ; font-size: 80px; text-align: center">Academy C#.NET VT18
                 <br />
                 Ping Pong Tournament</h1>
             <center>
