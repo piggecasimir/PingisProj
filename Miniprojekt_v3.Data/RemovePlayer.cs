@@ -20,8 +20,8 @@ namespace Miniprojekt_v3.Data
 			try
 			{
 				conn.Open();
-				command.ExecuteNonQuery();
 				command2.ExecuteNonQuery();
+				command.ExecuteNonQuery();
 			}
 			catch
 			{
